@@ -40,6 +40,7 @@ a {
 }
 
 main {
+  max-width: 211mm;
   height: fit-content;
   margin: 0 auto;
   background: #fff;
