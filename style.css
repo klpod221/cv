@@ -14,6 +14,10 @@ body {
   font-size: 14px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .flex {
   display: flex;
 }
@@ -35,25 +39,21 @@ body {
   margin-left: 16px;
 }
 
-.page {
-  width: 210mm;
-  height: 297mm;
+main {
+  height: fit-content;
   margin: 0 auto;
   background: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   padding: 30px;
   position: relative;
 }
 
-.page.page-1::before {
+main::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 52px;
   height: 400px;
-  background: #fef200;
-  z-index: 0;
+  border-left: 55px solid #e67843;
 }
 
 .page-content {
@@ -61,36 +61,21 @@ body {
   z-index: 10;
 }
 
-.page-1 .page-content {
+.grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 50px;
 }
 
-.page-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 20px;
-  background: #fef200;
-  display: flex;
-  justify-content: end;
-  padding: 0 20px;
-  z-index: 50;
-}
-
 .info {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .avatar {
-  overflow: hidden;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  width: 90%;
+  margin: 20px 0;
+  width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 
 .avatar img {
@@ -99,7 +84,7 @@ body {
   height: 150px;
   border-radius: 50%;
   border: 2px solid #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
 }
 
 .icon-content {
@@ -111,7 +96,7 @@ body {
   font-size: 16px;
   width: 20px;
   text-align: center;
-  color: #5d5d5d;
+  color: #000;
   margin-right: 10px;
 }
 
@@ -154,21 +139,22 @@ body {
   border-top: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-.cv-content.no-border::before {
-  border: none;
-}
-
 .cv-content .title {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
+.cv-content .title i {
+  color: #e67843;
+  margin-right: 5px;
+  width: 20px;
+}
+
 .cv-content .cv-item {
   margin-bottom: 20px;
 }
 
-/* last item */
 .cv-content .cv-item:last-child {
   margin-bottom: 0;
 }

@@ -6,13 +6,4 @@ console.log('https://github.com/klpod221/cv');
 const exp = document.getElementById('exp');
 const diff = new Date() - new Date('2021-12-01');
 const year = Math.floor(diff / 31536000000);
-exp.innerHTML = year;
-
-// if user use mobile, and the route is not /mobile, redirect to /mobile
-// and if user use desktop, and the route is /mobile, redirect to /
-// if (window.screen.width < 768 && window.location.pathname != '/mobile') {
-//   window.location = '/mobile';
-// }
-// if (window.screen.width >= 768 && window.location.pathname == '/mobile') {
-//   window.location = '/';
-// }
+exp.innerHTML = year + '+';
