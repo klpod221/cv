@@ -13,9 +13,16 @@ const puppeteer = require('puppeteer');
     waitUntil: 'networkidle0',
   });
 
+  // export to pdf
   await page.pdf({
-    path: 'output.pdf',
+    path: 'output/cv.pdf',
     format: 'A4'
+  });
+
+  // export to png
+  await page.screenshot({
+    path: 'output/cv.png',
+    fullPage: true
   });
 
   await browser.close();
