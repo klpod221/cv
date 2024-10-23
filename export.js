@@ -13,6 +13,8 @@ const puppeteer = require('puppeteer');
     waitUntil: 'networkidle0',
   });
 
+  console.log('Exporting to PDF...');
+
   // export to pdf
   await page.pdf({
     path: 'output/cv.pdf',
