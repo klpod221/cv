@@ -175,3 +175,51 @@ main::before {
   margin-top: 5px;
   color: #5d5d5d;
 }
+
+.download-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.download-btn a {
+  background: #e67843;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.download-btn a:hover {
+  background: #5d5d5d;
+}
+
+.download-btn a:hover i {
+  animation: shake 0.5s;
+}
+
+.download-btn a i {
+  margin-right: 10px;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
